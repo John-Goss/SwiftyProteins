@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
 					if success {
 						print("User authenticated successfully with biometrics")
 //						DISPLAYS PROTEIN LIST VIEW CONTROLLER
-						print("Protein List")
+						self.performSegue(withIdentifier: "showProteinsListView", sender: self)
 					} else {
 						print("Sorry user did not authenticate successfully")
 						self.displayAlert(title: "Error", message: "Sorry user did not authenticate successfully")
@@ -79,7 +79,8 @@ class LoginViewController: UIViewController {
 			alert.addAction(UIAlertAction(title: "Connect", style: .default, handler: { (_) in
 				print("User authenticated successfully with login & password")
 //				DISPLAYS PROTEIN LIST VIEW CONTROLLER
-				print("Protein List")
+				let nextViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "proteinsListViewControllerID") as UIViewController
+				self.present(nextViewController, animated: true, completion: nil)
 			}))
 			
 			self.present(alert, animated: true, completion: nil)

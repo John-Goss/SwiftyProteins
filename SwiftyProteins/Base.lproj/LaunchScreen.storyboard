@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +13,31 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hexaaquasodium-3D-balls" translatesAutoresizingMaskIntoConstraints="NO" id="IxO-9z-4Na">
+                                <rect key="frame" x="62" y="303" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IxO-9z-4Na" secondAttribute="height" multiplier="1:1" id="Js5-gC-Lfi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swifty Proteins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOo-if-lnb">
+                                <rect key="frame" x="62" y="601" width="290" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EOo-if-lnb" firstAttribute="width" secondItem="IxO-9z-4Na" secondAttribute="width" id="9Cb-gS-lUE"/>
+                            <constraint firstItem="EOo-if-lnb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bq4-dr-OV8"/>
+                            <constraint firstItem="IxO-9z-4Na" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CLK-cq-Wv7"/>
+                            <constraint firstItem="EOo-if-lnb" firstAttribute="top" secondItem="IxO-9z-4Na" secondAttribute="bottom" constant="8" id="hcO-tr-5mw"/>
+                            <constraint firstItem="IxO-9z-4Na" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.7" id="jDQ-hT-3FU"/>
+                            <constraint firstItem="IxO-9z-4Na" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uJB-tZ-AWF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +46,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hexaaquasodium-3D-balls" width="1097" height="1100"/>
+    </resources>
 </document>

@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftyProteins" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome" id="BYZ-38-t0r" customClass="LoginViewController" customModule="SwiftyProteins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIz-tB-dzQ">
-                                <rect key="frame" x="142" y="426" width="130" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Swifty Proteins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut1-Zd-VmD">
+                                <rect key="frame" x="64.5" y="49" width="191.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First, you have to login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq9-Xe-GPZ">
+                                <rect key="frame" x="45" y="183" width="230" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="hvy-5a-LY7">
+                                <rect key="frame" x="136" y="220" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hvy-5a-LY7" secondAttribute="height" multiplier="1:1" id="P1d-Cn-WjY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIz-tB-dzQ">
+                                <rect key="frame" x="89" y="265" width="142" height="38"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Biometric Login">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -32,12 +47,49 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ut1-Zd-VmD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8DX-ql-0eb"/>
+                            <constraint firstItem="eIz-tB-dzQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="P8N-Id-EPc"/>
+                            <constraint firstItem="hvy-5a-LY7" firstAttribute="top" secondItem="jq9-Xe-GPZ" secondAttribute="bottom" constant="8" id="PTl-WS-Bcn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ut1-Zd-VmD" secondAttribute="trailing" id="PgY-Uf-lLa"/>
+                            <constraint firstItem="hvy-5a-LY7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJV-xA-Azc"/>
+                            <constraint firstItem="hvy-5a-LY7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="VQ3-SJ-zLM"/>
+                            <constraint firstItem="jq9-Xe-GPZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZMy-Qg-aB3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jq9-Xe-GPZ" secondAttribute="trailing" id="cFb-Nx-RnR"/>
+                            <constraint firstItem="jq9-Xe-GPZ" firstAttribute="top" secondItem="ut1-Zd-VmD" secondAttribute="bottom" multiplier="1.5" constant="1" id="dVd-Qd-0jb"/>
+                            <constraint firstItem="jq9-Xe-GPZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hnu-q4-zpt"/>
+                            <constraint firstItem="ut1-Zd-VmD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jQ2-Gr-IAE"/>
+                            <constraint firstItem="ut1-Zd-VmD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.3" id="sGA-BB-df4"/>
+                            <constraint firstItem="eIz-tB-dzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zFd-yf-tue"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButtonOutlet" destination="eIz-tB-dzQ" id="qJe-hK-cCX"/>
+                        <outlet property="subTitleLabel" destination="jq9-Xe-GPZ" id="HOY-9w-LfT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
+        <!--Proteins List View Controller-->
+        <scene sceneID="g9Q-kk-vkY">
+            <objects>
+                <viewController storyboardIdentifier="proteinsListViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dcM-kZ-yck" customClass="ProteinsListViewController" customModule="SwiftyProteins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5yA-7U-a2I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KIL-Bn-n61"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOk-Bh-d5P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="138"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="downArrow" width="128" height="128"/>
+    </resources>
 </document>

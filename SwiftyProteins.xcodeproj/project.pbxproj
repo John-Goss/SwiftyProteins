@@ -12,6 +12,7 @@
 		5743BFCB2358B90700D3C10F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5743BFC92358B90700D3C10F /* Main.storyboard */; };
 		5743BFCD2358B90800D3C10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5743BFCC2358B90800D3C10F /* Assets.xcassets */; };
 		5743BFD02358B90800D3C10F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5743BFCE2358B90800D3C10F /* LaunchScreen.storyboard */; };
+		84C36887235E101400E78A94 /* ProteinsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C36886235E101400E78A94 /* ProteinsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5743BFCC2358B90800D3C10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5743BFCF2358B90800D3C10F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5743BFD12358B90800D3C10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C36886235E101400E78A94 /* ProteinsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProteinsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		5743BFC42358B90700D3C10F /* SwiftyProteins */ = {
 			isa = PBXGroup;
 			children = (
+				84C36888235E102000E78A94 /* Controller */,
 				5743BFC52358B90700D3C10F /* AppDelegate.swift */,
-				5743BFC72358B90700D3C10F /* ViewController.swift */,
 				5743BFC92358B90700D3C10F /* Main.storyboard */,
 				5743BFCC2358B90800D3C10F /* Assets.xcassets */,
 				5743BFCE2358B90800D3C10F /* LaunchScreen.storyboard */,
 				5743BFD12358B90800D3C10F /* Info.plist */,
 			);
 			path = SwiftyProteins;
+			sourceTree = "<group>";
+		};
+		84C36888235E102000E78A94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5743BFC72358B90700D3C10F /* ViewController.swift */,
+				84C36886235E101400E78A94 /* ProteinsListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5743BFC82358B90700D3C10F /* ViewController.swift in Sources */,
+				84C36887235E101400E78A94 /* ProteinsListViewController.swift in Sources */,
 				5743BFC62358B90700D3C10F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8794DBN7U;
 				INFOPLIST_FILE = SwiftyProteins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,7 +303,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jlequer.SwiftyProteins;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -300,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8794DBN7U;
 				INFOPLIST_FILE = SwiftyProteins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +321,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jlequer.SwiftyProteins;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
